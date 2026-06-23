@@ -218,6 +218,26 @@ h2 + .lead{color:var(--muted);margin-top:.7rem;font-size:var(--text-lg);max-widt
 .role .where{font-family:var(--font-mono);font-size:.74rem;color:var(--c);font-weight:600;letter-spacing:.02em;margin-bottom:.6rem;display:block}
 .role p{font-size:.92rem;color:var(--muted)}
 
+/* ============ 다운로드 ============ */
+.dl-grid{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:760px){.dl-grid{grid-template-columns:repeat(3,1fr)}}
+.dl{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow-sm);border-top:3px solid var(--c);display:flex;flex-direction:column}
+.dl.d-tail{--c:var(--tail)}.dl.d-sun{--c:var(--sun)}.dl.d-moon{--c:var(--moon)}
+.dl-head{display:flex;align-items:center;gap:.7rem;margin-bottom:.5rem}
+.dl-head .ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 16%,transparent);color:var(--c);flex:none}
+.dl-head .ico svg{width:20px;height:20px}
+.dl-head h4{font-family:var(--font-display);font-size:1.08rem}
+.dl-head .where{font-family:var(--font-mono);font-size:.7rem;color:var(--c);font-weight:600;display:block;margin-top:.1rem}
+.dl p{font-size:.86rem;color:var(--muted);margin-bottom:1rem}
+.dl-btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;background:var(--c);color:#fff;font-weight:600;font-size:.9rem;padding:.7rem 1rem;border-radius:10px;text-decoration:none;transition:.2s;margin-top:auto}
+.dl-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.dl-btn svg{width:15px;height:15px}
+.dl-links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem}
+.dl-links a{font-size:.76rem;font-family:var(--font-mono);color:var(--muted);background:var(--surface-2);border:1px solid var(--border);border-radius:7px;padding:.28rem .55rem;text-decoration:none;transition:.15s}
+.dl-links a:hover{border-color:var(--c);color:var(--c)}
+.dl-note{font-size:.84rem;color:var(--muted);text-align:center;margin-top:1.2rem}
+.dl-note b{color:var(--text)}
+
 /* ============ 시나리오 ============ */
 .sc-grid{display:grid;gap:1.2rem;grid-template-columns:1fr}
 @media(min-width:680px){.sc-grid{grid-template-columns:repeat(2,1fr)}}
@@ -405,6 +425,7 @@ footer{border-top:1px solid var(--border);margin-top:var(--space-2xl);padding:2.
     <ol>
       <li><a href="#how" data-spy="how"><span class="n">·</span> 작동 원리</a></li>
       <li><a href="#roles" data-spy="roles"><span class="n">·</span> 세 도구의 역할</a></li>
+      <li><a href="#download" data-spy="download"><span class="n">·</span> 다운로드</a></li>
       <li><a href="#scenarios" data-spy="scenarios"><span class="n">·</span> 활용 시나리오</a></li>
       <li><a href="#prep" data-spy="prep"><span class="n">·</span> 준비물</a></li>
       <li class="toc-divider" aria-hidden="true" style="list-style:none"></li>
@@ -552,6 +573,58 @@ footer{border-top:1px solid var(--border);margin-top:var(--space-2xl);padding:2.
           <p>그 화면을 받아 저지연으로 띄우는 뷰어입니다. 노트북·폰·태블릿·미니PC·TV 어디든 설치. 키보드·마우스·터치·게임패드·오디오까지 그대로 전달해요. (오픈소스)</p>
         </div>
       </div>
+    </section>
+
+    <!-- 다운로드 -->
+    <section class="section" id="download">
+      <div class="section-head reveal">
+        <span class="kicker">Downloads</span>
+        <h2>프로그램 다운로드</h2>
+        <p class="lead">여기서 한 번에 받으세요. 호스트 PC엔 <b>Tailscale + Sunshine</b>, 조종할 기기엔 <b>Tailscale + Moonlight</b>를 깝니다. 모두 공식 배포처입니다.</p>
+      </div>
+      <div class="dl-grid">
+        <div class="dl d-tail reveal">
+          <div class="dl-head">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><circle cx="12" cy="12" r="2"/><path d="M6.5 6.5l4 4M17.5 6.5l-4 4M6.5 17.5l4-4M17.5 17.5l-4-4"/></svg></div>
+            <div><h4>Tailscale</h4><span class="where">모든 기기에 설치</span></div>
+          </div>
+          <p>기기를 하나의 보안망으로 묶는 메시 VPN. 개인용 무료 플랜으로 충분합니다.</p>
+          <a class="dl-btn" href="https://tailscale.com/download" target="_blank" rel="noopener">공식 다운로드 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <div class="dl-links">
+            <a href="https://tailscale.com/download/windows" target="_blank" rel="noopener">Windows</a>
+            <a href="https://tailscale.com/download/mac" target="_blank" rel="noopener">macOS</a>
+            <a href="https://tailscale.com/download/linux" target="_blank" rel="noopener">Linux</a>
+            <a href="https://play.google.com/store/apps/details?id=com.tailscale.ipn" target="_blank" rel="noopener">Android</a>
+            <a href="https://apps.apple.com/app/tailscale/id1470499037" target="_blank" rel="noopener">iOS</a>
+          </div>
+        </div>
+        <div class="dl d-sun reveal">
+          <div class="dl-head">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><circle cx="12" cy="11" r="3"/></svg></div>
+            <div><h4>Sunshine</h4><span class="where">호스트 PC 1대</span></div>
+          </div>
+          <p>내 PC를 송출 호스트로 만드는 오픈소스. 윈도우 설치본은 Releases 안에 있어요.</p>
+          <a class="dl-btn" href="https://github.com/LizardByte/Sunshine/releases/latest" target="_blank" rel="noopener">GitHub Releases <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <div class="dl-links">
+            <a href="https://github.com/LizardByte/Sunshine" target="_blank" rel="noopener">GitHub 저장소</a>
+            <a href="https://docs.lizardbyte.dev/projects/sunshine/latest/" target="_blank" rel="noopener">공식 문서</a>
+          </div>
+        </div>
+        <div class="dl d-moon reveal">
+          <div class="dl-head">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
+            <div><h4>Moonlight</h4><span class="where">조종할 기기들</span></div>
+          </div>
+          <p>화면을 받아 저지연으로 조작하는 뷰어. 노트북·폰·태블릿·TV용이 다 있어요.</p>
+          <a class="dl-btn" href="https://moonlight-stream.org/" target="_blank" rel="noopener">공식 사이트 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <div class="dl-links">
+            <a href="https://github.com/moonlight-stream/moonlight-qt/releases/latest" target="_blank" rel="noopener">PC (Win·Mac·Linux)</a>
+            <a href="https://play.google.com/store/apps/details?id=com.limelight" target="_blank" rel="noopener">Android</a>
+            <a href="https://apps.apple.com/app/moonlight-game-streaming/id1000551566" target="_blank" rel="noopener">iOS · tvOS</a>
+          </div>
+        </div>
+      </div>
+      <p class="dl-note">셋 다 <b>무료</b>예요 — Sunshine·Moonlight는 오픈소스, Tailscale은 개인용 무료 플랜이면 충분합니다.</p>
     </section>
 
     <!-- 활용 시나리오 -->
