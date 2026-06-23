@@ -459,62 +459,62 @@ footer{border-top:1px solid var(--border);margin-top:var(--space-2xl);padding:2.
             <linearGradient id="g-tail" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0" stop-color="#6d5efc"/><stop offset="1" stop-color="#2f9bf5"/>
             </linearGradient>
-            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
               <path d="M0 0L10 5L0 10z" fill="#2f9bf5"/>
             </marker>
           </defs>
 
+          <!-- 라이트 캔버스 패널 (다크모드 대비 확보) -->
+          <rect x="6" y="6" width="748" height="348" rx="16" fill="#f8f9fd"/>
+
           <!-- Tailscale 보안망 밴드 -->
-          <rect x="20" y="280" width="720" height="62" rx="16" fill="url(#g-tail)" opacity="0.14"/>
-          <rect x="20" y="280" width="720" height="62" rx="16" fill="none" stroke="url(#g-tail)" stroke-width="1.5" stroke-dasharray="3 5"/>
-          <text x="380" y="307" text-anchor="middle" class="lbl" fill="#6d5efc" font-size="15">Tailscale 보안 네트워크 (어디에 있든 하나로)</text>
-          <text x="380" y="328" text-anchor="middle" fill="#8a8d99" font-size="12">암호화된 사설 IP · 공유기 설정 불필요</text>
+          <rect x="24" y="286" width="712" height="58" rx="16" fill="url(#g-tail)" opacity="0.13"/>
+          <rect x="24" y="286" width="712" height="58" rx="16" fill="none" stroke="url(#g-tail)" stroke-width="1.5" stroke-dasharray="3 5"/>
+          <text x="380" y="312" text-anchor="middle" class="lbl" fill="#6d5efc" font-size="14.5">Tailscale 보안 네트워크 (어디에 있든 하나로)</text>
+          <text x="380" y="331" text-anchor="middle" fill="#6f7280" font-size="12">암호화된 사설 IP · 공유기 설정 불필요</text>
+
+          <!-- 기기 → Tailscale 밴드 연결선 (박스 뒤) -->
+          <path d="M127 258 L127 286" fill="none" stroke="#6d5efc" stroke-width="1.4" stroke-dasharray="2 4"/>
+          <path d="M380 266 L380 286" fill="none" stroke="#6d5efc" stroke-width="1.4" stroke-dasharray="2 4"/>
+          <path d="M604 258 L604 286" fill="none" stroke="#6d5efc" stroke-width="1.4" stroke-dasharray="2 4"/>
+          <path d="M306 138 C284 195 280 245 280 286" fill="none" stroke="#6d5efc" stroke-width="1.4" stroke-dasharray="2 4"/>
 
           <!-- 호스트 (Sunshine) -->
           <g>
-            <rect x="300" y="40" width="160" height="96" rx="14" fill="#fff" stroke="#f0a020" stroke-width="2"/>
-            <rect x="316" y="58" width="128" height="52" rx="6" fill="#fcefcf"/>
-            <circle cx="380" cy="84" r="13" fill="#f0a020"/>
-            <path d="M380 76v16M372 84h16" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
-            <text x="380" y="128" text-anchor="middle" class="lbl" fill="#15161d" font-size="13">사무실 데스크탑</text>
-            <rect x="318" y="14" width="124" height="20" rx="10" fill="#f0a020"/>
-            <text x="380" y="28" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Sunshine · 호스트</text>
+            <rect x="300" y="42" width="160" height="94" rx="14" fill="#fff" stroke="#f0a020" stroke-width="2"/>
+            <rect x="316" y="60" width="128" height="50" rx="6" fill="#fcefcf"/>
+            <circle cx="380" cy="85" r="13" fill="#f0a020"/>
+            <path d="M380 77v16M372 85h16" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+            <text x="380" y="127" text-anchor="middle" class="lbl" fill="#15161d" font-size="13">사무실 데스크탑</text>
+            <rect x="312" y="16" width="136" height="20" rx="10" fill="#f0a020"/>
+            <text x="380" y="30" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Sunshine · 호스트</text>
           </g>
 
-          <!-- 클라이언트 3대 -->
-          <!-- 노트북 -->
+          <!-- 클라이언트 3대 (Moonlight) -->
           <g>
-            <rect x="70" y="180" width="120" height="74" rx="12" fill="#fff" stroke="#2f9bf5" stroke-width="1.6"/>
-            <rect x="86" y="194" width="88" height="40" rx="4" fill="#dcefff"/>
-            <text x="130" y="246" text-anchor="middle" fill="#15161d" font-size="12">집 노트북</text>
+            <rect x="66" y="184" width="122" height="74" rx="12" fill="#fff" stroke="#2f9bf5" stroke-width="1.6"/>
+            <rect x="82" y="198" width="90" height="40" rx="4" fill="#dcefff"/>
+            <text x="127" y="250" text-anchor="middle" fill="#15161d" font-size="12">집 노트북</text>
           </g>
-          <!-- 폰 -->
           <g>
-            <rect x="350" y="184" width="60" height="78" rx="11" fill="#fff" stroke="#2f9bf5" stroke-width="1.6"/>
-            <rect x="360" y="196" width="40" height="48" rx="4" fill="#dcefff"/>
-            <text x="380" y="256" text-anchor="middle" fill="#15161d" font-size="12">폰</text>
+            <rect x="350" y="188" width="60" height="78" rx="11" fill="#fff" stroke="#2f9bf5" stroke-width="1.6"/>
+            <rect x="360" y="200" width="40" height="48" rx="4" fill="#dcefff"/>
+            <text x="380" y="260" text-anchor="middle" fill="#15161d" font-size="12">폰</text>
           </g>
-          <!-- 태블릿 -->
           <g>
-            <rect x="560" y="182" width="92" height="74" rx="11" fill="#fff" stroke="#2f9bf5" stroke-width="1.6"/>
-            <rect x="574" y="194" width="64" height="44" rx="4" fill="#dcefff"/>
-            <text x="606" y="248" text-anchor="middle" fill="#15161d" font-size="12">태블릿 · TV</text>
+            <rect x="558" y="184" width="92" height="74" rx="11" fill="#fff" stroke="#2f9bf5" stroke-width="1.6"/>
+            <rect x="572" y="198" width="64" height="44" rx="4" fill="#dcefff"/>
+            <text x="604" y="250" text-anchor="middle" fill="#15161d" font-size="12">태블릿 · TV</text>
           </g>
-          <text x="130" y="172" text-anchor="middle" fill="#2f9bf5" font-size="10.5" font-weight="700">Moonlight</text>
-          <text x="380" y="176" text-anchor="middle" fill="#2f9bf5" font-size="10.5" font-weight="700">Moonlight</text>
-          <text x="606" y="174" text-anchor="middle" fill="#2f9bf5" font-size="10.5" font-weight="700">Moonlight</text>
 
-          <!-- 스트림 화살표: 호스트 → 클라이언트 -->
-          <path d="M312 132 C220 150 160 160 132 178" fill="none" stroke="#2f9bf5" stroke-width="2" marker-end="url(#arr)" opacity="0.8"/>
-          <path d="M380 138 L380 182" fill="none" stroke="#2f9bf5" stroke-width="2" marker-end="url(#arr)" opacity="0.8"/>
-          <path d="M448 132 C540 150 580 160 606 180" fill="none" stroke="#2f9bf5" stroke-width="2" marker-end="url(#arr)" opacity="0.8"/>
-          <text x="490" y="150" fill="#62656f" font-size="11">화면·소리·조작 스트림 ↓</text>
+          <!-- 스트림 화살표: 호스트 → 클라이언트 (박스 위, 화살촉 노출) -->
+          <path d="M316 138 C240 152 175 166 130 180" fill="none" stroke="#2f9bf5" stroke-width="2" marker-end="url(#arr)" opacity="0.85"/>
+          <path d="M380 140 L380 184" fill="none" stroke="#2f9bf5" stroke-width="2" marker-end="url(#arr)" opacity="0.85"/>
+          <path d="M444 138 C520 152 575 166 604 180" fill="none" stroke="#2f9bf5" stroke-width="2" marker-end="url(#arr)" opacity="0.85"/>
 
-          <!-- 기기 → Tailscale 밴드 연결선 -->
-          <path d="M130 254 L130 280" stroke="#6d5efc" stroke-width="1.4" stroke-dasharray="2 4"/>
-          <path d="M380 262 L380 280" stroke="#6d5efc" stroke-width="1.4" stroke-dasharray="2 4"/>
-          <path d="M606 256 L606 280" stroke="#6d5efc" stroke-width="1.4" stroke-dasharray="2 4"/>
-          <path d="M380 136 C500 200 660 230 700 280" fill="none" stroke="#6d5efc" stroke-width="1.4" stroke-dasharray="2 4"/>
+          <!-- 스트림 라벨: 테두리 박스로 선 위에 얹어 가독성 확보 -->
+          <rect x="294" y="150" width="172" height="25" rx="12.5" fill="#ffffff" stroke="#cdd2e6" stroke-width="1"/>
+          <text x="380" y="167" text-anchor="middle" fill="#3a3e4a" font-size="11.5" font-weight="600">화면·소리·조작 스트림 ↓</text>
         </svg>
         <div class="topo-legend">
           <span><i class="l-tail"></i> Tailscale — 모든 기기를 잇는 보안망</span>
